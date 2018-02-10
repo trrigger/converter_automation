@@ -1,6 +1,8 @@
-area: -t @area
-volume: -t @volume
-wip: -t @wip
+area: -t @area --format html --out report.html --format pretty
+volume: -t @volume --format html --out report.html --format pretty
+time: -t @time --format html --out report.html --format pretty
+wip: -t @wip --format html --out report.html --format pretty
 
-any: -t @area, @volume, @wip
+any: -t @area,@volume,@wip,@time --format html --out report.html --format pretty
 wip_area: -t @wip -t @area --format html --out report.html --format pretty
+all_areas: -t @area,@volume,@time --format html --out report.html --format pretty
